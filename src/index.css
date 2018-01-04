@@ -1,5 +1,115 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px;
+  background-color: #faf8ef;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.header-column {
+  display: grid;
+  grid-template-rows: 6.5fr 3.5fr;
+  grid-gap: 15px;
+}
+
+.logo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #ecc400;
+  color: #fff;
+}
+
+.rank {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bbada0;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.rank-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #eee4d5;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  background-color: #ed995b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.role {
+  color: #776e65;
+}
+
+.body {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 60px;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+
+  border-radius: 4px;
+  background-color: #bbada0;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #ccc0b4;
+  color: #776e65;
+}
+
+.baseBox-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: inherit;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.baseBox-shape {
+  padding: 50% 0;
+}
+
