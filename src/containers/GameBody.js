@@ -1,5 +1,6 @@
 import React from 'react';
 import GameBox from './GameBox'
+import { touchStart, touchEnd } from '../utils/touch.js'
 
 function makeBoxLists() {
   let boxLists = [];
@@ -11,7 +12,9 @@ function makeBoxLists() {
 
 function GameBody() {
   return (
-    <div className="body">
+    <div className="body"
+      onTouchStart={touchStart}
+      onTouchEnd={touchEnd}>
       { makeBoxLists.call(this) }
     </div>
   );
