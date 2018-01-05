@@ -1,10 +1,11 @@
 import React from 'react';
-import GameBaseBox from '../components/GameBaseBox.js'
+import GameBoxShape from '../components/GameBoxShape.js'
 
 function GameLogo() {
   return (
     <div className="logo">
-      <GameBaseBox value="2048" />
+      <div className="logo-content">2048</div>
+      <GameBoxShape />
     </div>
   );
 }

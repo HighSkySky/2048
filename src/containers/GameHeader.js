@@ -8,11 +8,11 @@ function GameHeader() {
     <div className="header">
       <GameLogo />
       <div className="header-column">
-        <GameRank />
+        <GameRank title="分数" value="16"/>
         <GameButton />
       </div>
       <div className="header-column">
-        <GameRank />
+        <GameRank title="历史最高成绩" value="16" />
         <GameButton />
       </div>
     </div>
