@@ -33,29 +33,36 @@ let startX, startY;
 export const touchStart = (ev) => {
   startX = ev.touches[0].pageX;
   startY = ev.touches[0].pageY;
+  if (ev.cancelable) {
+    if (!ev.defaultPrevented) {
+        ev.preventDefault();
+    }
+}
 };
 
 export const touchEnd = (ev) => {
+  ev.preventDefault();
   var endX, endY;
   endX = ev.changedTouches[0].pageX;
   endY = ev.changedTouches[0].pageY;
   var direction = GetSlideDirection(startX, startY, endX, endY);
   switch (direction) {
     case 0:
-      alert("没滑动");
+      console.log("没滑动");
       break;
     case 1:
-      alert("向上");
+      console.log("向上");
       break;
     case 2:
-      alert("向下");
+      console.log("向下");
       break;
     case 3:
-      alert("向左");
+      console.log("向左");
       break;
     case 4:
-      alert("向右");
+      console.log("向右");
       break;
     default:
   }
+  return direction;
 };

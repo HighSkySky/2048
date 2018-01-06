@@ -10,13 +10,8 @@ function getClass(value) {
 }
 
 function GameBox(props) {
-  const handleClick = () => {
-    console.log('click')
-  }
-
   return (
-    <div className={'box' + getClass(props.value)} 
-      onClick={handleClick}>
+    <div className={'box' + getClass(props.value)} >
       <div className="box-content">{props.value}</div>
       <GameBoxShape />
     </div>
