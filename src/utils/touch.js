@@ -46,23 +46,5 @@ export const touchEnd = (ev) => {
   endX = ev.changedTouches[0].pageX;
   endY = ev.changedTouches[0].pageY;
   var direction = GetSlideDirection(startX, startY, endX, endY);
-  switch (direction) {
-    case 0:
-      console.log("没滑动");
-      break;
-    case 1:
-      console.log("向上");
-      break;
-    case 2:
-      console.log("向下");
-      break;
-    case 3:
-      console.log("向左");
-      break;
-    case 4:
-      console.log("向右");
-      break;
-    default:
-  }
   return direction;
 };
