@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
-function GameButton() {
+function GameButton(props) {
   return (
-    <div className="button">
-      <span>按钮</span>
-    </div>
+    <a className="button"
+      onClick={props.onClick}>
+      <span>{props.children}</span>
+    </a>
   );
+}
+
+GameButton.propTypes = {
+  onClick: PropTypes.func
 }
 
 export default GameButton;

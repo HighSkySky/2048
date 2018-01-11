@@ -103,6 +103,7 @@ html {
   background-color: #ccc0b4;
   color: #776e65;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 .box-content {
@@ -112,7 +113,6 @@ html {
   align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -132,6 +132,43 @@ html {
 }
 .box-8 {
   background-color: #f2b179;
+  color: #fff;
+}
+.box-16 {
+  background-color: #f69465;
+  color: #fff;
+}
+.box-32 {
+  background-color: #f77e61;
+  color: #fff;
+}
+.box-64 {
+  background-color: #f65d3b;
+  color: #fff;
+}
+.box-128 {
+  font-size: .8rem;
+  background-color: #f0cc74;
+  color: #fff;
+}
+.box-256 {
+  font-size: .8rem;
+  background-color: #eecb67;
+  color: #fff;
+}
+.box-512 {
+  font-size: .8rem;
+  background-color: #ecc84d;
+  color: #fff;
+}
+.box-1024 {
+  font-size: .6rem;
+  background-color: #efc441;
+  color: #fff;
+}
+.box-2048 {
+  font-size: .6rem;
+  background-color: #f8ba00;
   color: #fff;
 }
 

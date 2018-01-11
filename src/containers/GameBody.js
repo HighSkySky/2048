@@ -3,12 +3,11 @@ import { connect } from 'react-redux';
 import GameBox from './GameBox';
 import { touchStart, touchEnd } from '../utils/touch.js';
 import initSite from '../utils/initSite.js';
-import moveSite from '../utils/moveSite';
-import { initList, changeList } from '../reducers/gameApp.js';
+import moveSite from '../utils/moveSite.js';
+import { changeList } from '../reducers/gameApp.js';
 
 class GameBody extends Component {
-  _changeList({ value, index }) {
-    const newList = this.props.list.slice(0);
+  _changeList(newList, { value, index }) {
     newList[index] = value;
     this.props.onChange(newList);
   }
@@ -20,9 +19,9 @@ class GameBody extends Component {
   handleTouchEnd = (ev) => {
     const target = touchEnd(ev);
     if (target) {
-      const newlist = moveSite(target, this.props.list);
-      const newSite = initSite(newlist);
-      this._changeList(newSite);
+      const newList = moveSite(target, this.props.list);
+      const newSite = initSite(newList);
+      this._changeList(newList, newSite);
     }
   }
 
@@ -33,7 +32,7 @@ class GameBody extends Component {
         onTouchEnd={this.handleTouchEnd}>
         { 
           this.props.list.map((value, index) => 
-          <GameBox key={index} value={String(value)} />) 
+          <GameBox key={index} value={value} />) 
         }
       </div>
     );
@@ -42,14 +41,14 @@ class GameBody extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    list: state.list
+    list: state.list,
+    gameLists: state.gameLists
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onInit: () => { dispatch(initList()); },
-    onChange: (list) => { dispatch(changeList(list)); }
+    onChange: (list) => { dispatch(changeList(list)); },
   }
 }
 

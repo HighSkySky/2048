@@ -21,7 +21,7 @@ function GameRank(props) {
 
 GameRank.propTypes = {
   title: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired
+  value: PropTypes.number.isRequired
 }
 
 export default GameRank;

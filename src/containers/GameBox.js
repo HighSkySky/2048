@@ -12,18 +12,18 @@ function getClass(value) {
 function GameBox(props) {
   return (
     <div className={'box' + getClass(props.value)} >
-      <div className="box-content">{props.value}</div>
+      <div className="box-content">{props.value === 0 ? '' : props.value}</div>
       <GameBoxShape />
     </div>
   );
 }
 
 GameBox.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
 GameBox.defaultProps = {
-  value: ''
+  value: 0
 }
 
 export default GameBox;
