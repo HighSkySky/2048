@@ -114,6 +114,7 @@ html {
   width: 100%;
   height: 100%;
   font-weight: bold;
+  user-select: none;
 }
 
 .box-shape {
@@ -122,6 +123,35 @@ html {
 
 .box-shape-fill {
   padding: 50% 0;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(245, 211, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.modal-button {
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid #fff;
+  color: #fff;
+  font-size: .5rem;
 }
 
 .box-2 {

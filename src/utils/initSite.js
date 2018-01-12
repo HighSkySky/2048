@@ -1,6 +1,6 @@
 // 确认位置为空
 function check(lists, index) {
-  return !!lists[index];
+  return lists[index] !== 0;
 }
 
 // 随机生成2或4
