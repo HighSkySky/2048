@@ -77,6 +77,8 @@ html {
   font-size: .3rem;
   letter-spacing: 1px;
   color: #fff;
+  cursor: pointer;
+  user-select: none;
 }
 
 .role {

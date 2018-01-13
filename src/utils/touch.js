@@ -31,8 +31,8 @@ function GetSlideDirection(startX, startY, endX, endY) {
 let startX, startY;
 
 export const touchStart = (ev) => {
-  startX = ev.touches[0].pageX;
-  startY = ev.touches[0].pageY;
+  startX = ev.screenX || ev.touches[0].pageX;
+  startY = ev.screenY || ev.touches[0].pageY;
   if (ev.cancelable) {
     if (!ev.defaultPrevented) {
         ev.preventDefault();
@@ -43,8 +43,8 @@ export const touchStart = (ev) => {
 export const touchEnd = (ev) => {
   ev.preventDefault();
   var endX, endY;
-  endX = ev.changedTouches[0].pageX;
-  endY = ev.changedTouches[0].pageY;
+  endX = ev.screenX || ev.changedTouches[0].pageX;
+  endY = ev.screenY || ev.changedTouches[0].pageY;
   var direction = GetSlideDirection(startX, startY, endX, endY);
   return direction;
 };

@@ -52,7 +52,9 @@ class GameBody extends Component {
     return (
       <div className="body"
         onTouchStart={this.state.showModal ? null : this.handleTouchStart}
-        onTouchEnd={this.state.showModal ? null : this.handleTouchEnd}>
+        onTouchEnd={this.state.showModal ? null : this.handleTouchEnd}
+        onMouseDown={this.state.showModal ? null : this.handleTouchStart}
+        onMouseUp={this.state.showModal ? null : this.handleTouchEnd}>
         { 
           this.props.list.map((value, index) => 
           <GameBox key={index} value={value} />) 
