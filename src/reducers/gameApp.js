@@ -21,7 +21,7 @@ export default function (state, action) {
         rank: action.rank 
       };
     case CHANGE_LIST: 
-      if (state.gameLists.length <= 10) {
+      if (state.gameLists.length < 10) {
         return { 
           ...state,
           list: action.list, 

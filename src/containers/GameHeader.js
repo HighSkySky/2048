@@ -23,8 +23,8 @@ function GameHeader(props) {
         <GameButton onClick={handleClickInit}>重新开始</GameButton>
       </div>
       <div className="header-column">
-        <GameRank title="历史最高成绩" value={16} />
-        <GameButton onClick={handleClickDelete}>撤销</GameButton>
+        <GameRank title="可撤销步数" value={props.step} />
+        <GameButton onClick={handleClickDelete} >撤销</GameButton>
       </div>
     </div>
   );
@@ -32,7 +32,8 @@ function GameHeader(props) {
 
 const mapStateToProps = (state) => {
   return {
-    rank: calculate(state.list)
+    rank: calculate(state.list),
+    step: state.gameLists.length
   }
 }
 
